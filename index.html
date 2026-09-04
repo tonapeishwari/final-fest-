@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qiskit Fall Fest 2026 — A Decade of Quantum on Cloud</title>
+<meta name="description" content="Qiskit Fall Fest 2026: A Decade of Quantum on Cloud. Explore ten years of quantum computing, cloud access, and the ideas shaping what comes next. Talks, workshops, panels & hands-on sessions. Pune · October 2026.">
+<meta property="og:title" content="Qiskit Fall Fest 2026 — A Decade of Quantum on Cloud">
+<meta property="og:description" content="Join us to celebrate a decade of quantum computing on cloud. Talks, workshops, and quantum interactions await.">
+<meta name="theme-color" content="#4B2170">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Data (synchronous — must load before main JS) -->
+<script src="data/timeline.js"></script>
+<script src="data/speakers.js"></script>
+<script src="data/schedule.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#" class="brand" id="brand-logo" aria-label="Fall Fest — Home">
+      <!-- Quantum atom logo mark -->
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#C4A3E8" stroke-width="1.4"/>
+        <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="#A374E8" stroke-width="1" stroke-dasharray="2 2"/>
+        <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="#A374E8" stroke-width="1" transform="rotate(60 16 16)" stroke-dasharray="2 2"/>
+        <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="#A374E8" stroke-width="1" transform="rotate(120 16 16)" stroke-dasharray="2 2"/>
+        <circle cx="16" cy="16" r="2.2" fill="#C4A3E8"/>
+        <circle cx="29" cy="16" r="1.5" fill="#9B6FD4"/>
+      </svg>
+      <!-- SECOND LOGO SLOT: replace this img src once you upload your logo file.
+           Put your logo file at: assets/logos/fallfest-logo.png -->
+      <img src="assets/logos/fallfest-logo.png" alt="" class="brand-second-logo" id="brand-second-logo" onerror="this.style.display='none'">
+      <span>Fall Fest</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#haqthon">HaQthon</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#collaboration">Collaboration</a></li>
+      <li><a href="#social">Social Media</a></li>
+      <li><a href="#quantum-arena">Quantum Arena</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero" aria-label="Hero">
+  <!-- Wavefunction canvas background -->
+  <canvas id="wave-canvas" aria-hidden="true"></canvas>
+
+  <!-- Entangled qubit A — near top of page -->
+  <div class="qubit-particle qubit-a" id="qubit-a" aria-label="Entangled qubit A — interact to see quantum entanglement" tabindex="0" role="button">
+    <div class="qubit-inner"></div>
+    <div class="qubit-label">q₀</div>
+  </div>
+
+  <div class="wrap hero-wrap">
+    <!-- Left: Copy -->
+    <div class="hero-copy" id="hero-copy">
+      <div class="eyebrow-line">
+        <span class="mono">In partnership with</span>
+        <span class="eyebrow-badge">IBM Qiskit</span>
+      </div>
+
+      <h1 class="title-cinzel">Qiskit Fall Fest: A decade of quantum on cloud</h1>
+
+      <div class="hero-institutes mono" aria-label="In collaboration with IISER, MIT WPU and MMCOE">
+        <span>IISER</span><span class="hero-institutes-x">×</span><span>MIT WPU</span><span class="hero-institutes-x">×</span><span>MMCOE</span>
+      </div>
+
+      <p class="hero-sub">
+        Exploring ten years of quantum computing, cloud access, and the ideas shaping what comes next.
+      </p>
+
+      <div class="event-identity">
+        <div class="event-name-block">
+          <span class="event-name-label mono">Event</span>
+          <span class="event-name">Qiskit Fall Fest 2026</span>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="meta-label mono">Date</span>
+          <span class="meta-value">October 10–11, 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label mono">Location</span>
+          <span class="meta-value">Pune, India</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label mono">Format</span>
+          <span class="meta-value">Hybrid</span>
+        </div>
+      </div>
+
+      <div class="hero-quicklinks">
+        <a href="#register" class="btn btn-quicklink" id="hero-btn-register">Register for Events</a>
+        <a href="#haqthon" class="btn btn-quicklink" id="hero-btn-haqthon">Explore haQthon</a>
+        <a href="#quantum-arena" class="btn btn-quicklink" id="hero-btn-arena">Quantum Arena</a>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#register" class="btn btn-primary" id="hero-register-btn">
+          <span>Register Now</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#quantum" class="btn btn-secondary" id="hero-explore-btn">Explore the Quantum</a>
+      </div>
+
+      <!-- Hidden Feynman quote easter egg trigger -->
+      <div class="feynman-trigger" id="feynman-trigger" aria-label="A small atom icon" title="There's plenty of room at the bottom.">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <ellipse cx="9" cy="9" rx="8" ry="2.5" stroke="currentColor" stroke-width="0.8" opacity="0.3" transform="rotate(30 9 9)"/>
+          <circle cx="9" cy="9" r="1.5" fill="currentColor" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Right: Bloch sphere + Schrödinger's box -->
+    <div class="hero-visual">
+      <div class="bloch-container">
+        <canvas id="bloch-canvas" width="420" height="420"
+          role="img" aria-label="Animated Bloch sphere — a geometric representation of a qubit state. Hover to interact with the quantum state vector.">
+        </canvas>
+        <div class="bloch-caption mono">|ψ⟩ = α|0⟩ + β|1⟩</div>
+      </div>
+
+      <!-- Schrödinger's Box -->
+      <div class="schrodinger-box" id="schrodinger-box" tabindex="0" role="button"
+        aria-label="Schrödinger's Box — click to observe the quantum state"
+        data-state="superposition">
+        <div class="box-lid" id="box-lid">
+          <div class="box-lid-face top"></div>
+          <div class="box-lid-face front"></div>
+          <div class="box-lid-face side"></div>
+        </div>
+        <div class="box-body" id="box-body">
+          <div class="box-face front">
+            <div class="box-label">
+              <div class="box-title">SCHRÖDINGER'S BOX</div>
+              <div class="box-subtitle mono">Q-LAB // QISKIT-2026</div>
+              <div class="box-warning">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <path d="M6 1L11 10H1L6 1Z" stroke="currentColor" stroke-width="1"/>
+                  <line x1="6" y1="4" x2="6" y2="7" stroke="currentColor" stroke-width="1"/>
+                  <circle cx="6" cy="9" r="0.5" fill="currentColor"/>
+                </svg>
+                ⚠ DO NOT OBSERVE
+              </div>
+            </div>
+          </div>
+          <div class="box-face top"></div>
+          <div class="box-face side"></div>
+        </div>
+        <div class="box-state-badge" id="box-state-badge">
+          <span class="state-dot"></span>
+          <span class="state-text mono" id="box-state-text">STATE: SUPERPOSITION</span>
+        </div>
+        <div class="box-cat" id="box-cat" aria-hidden="true">
+          <!-- Split cat SVG: left half alive, right half skeletal -->
+          <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left half: alive cat -->
+            <clipPath id="left-half"><rect x="0" y="0" width="60" height="100"/></clipPath>
+            <clipPath id="right-half"><rect x="60" y="0" width="60" height="100"/></clipPath>
+            <!-- Cat body alive -->
+            <g clip-path="url(#left-half)">
+              <ellipse cx="60" cy="72" rx="28" ry="22" fill="#9B6FD4" opacity="0.6"/>
+              <circle cx="60" cy="45" r="20" fill="#9B6FD4" opacity="0.6"/>
+              <path d="M45 30 L40 18 L52 26Z" fill="#9B6FD4" opacity="0.6"/>
+              <circle cx="52" cy="43" r="4" fill="#1C1130"/>
+              <path d="M52 52 Q60 56 68 52" stroke="#1C1130" stroke-width="1.2" fill="none"/>
+              <line x1="40" y1="50" x2="30" y2="48" stroke="#1C1130" stroke-width="0.8"/>
+              <line x1="40" y1="53" x2="30" y2="53" stroke="#1C1130" stroke-width="0.8"/>
+            </g>
+            <!-- Cat body skeletal -->
+            <g clip-path="url(#right-half)">
+              <ellipse cx="60" cy="72" rx="28" ry="22" stroke="#4B2170" stroke-width="1" stroke-dasharray="3 2"/>
+              <circle cx="60" cy="45" r="20" stroke="#4B2170" stroke-width="1" stroke-dasharray="3 2"/>
+              <path d="M68 30 L75 18 L63 26Z" stroke="#4B2170" stroke-width="1" fill="none"/>
+              <circle cx="68" cy="43" r="5" stroke="#4B2170" stroke-width="1" fill="none"/>
+              <line x1="65" y1="41" x2="71" y2="41" stroke="#4B2170" stroke-width="0.8"/>
+              <line x1="60" y1="55" x2="65" y2="58" stroke="#4B2170" stroke-width="0.8"/>
+              <line x1="65" y1="58" x2="70" y2="55" stroke="#4B2170" stroke-width="0.8"/>
+              <line x1="60" y1="65" x2="60" y2="90" stroke="#4B2170" stroke-width="1"/>
+              <line x1="50" y1="75" x2="70" y2="75" stroke="#4B2170" stroke-width="0.8"/>
+            </g>
+            <!-- Dividing line -->
+            <line x1="60" y1="0" x2="60" y2="100" stroke="#7C4DBF" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+            <!-- Labels -->
+            <text x="28" y="98" font-size="7" fill="#4B2170" font-family="IBM Plex Mono" text-anchor="middle" opacity="0.8">ALIVE</text>
+            <text x="90" y="98" font-size="7" fill="#4B2170" font-family="IBM Plex Mono" text-anchor="middle" opacity="0.8">...WELL.</text>
+          </svg>
+        </div>
+        <div class="box-tooltip">You looked. That's the problem.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wavefunction collapse toast -->
+  <div class="collapse-toast" id="collapse-toast" aria-live="polite" aria-atomic="true">
+    <span class="mono">WAVEFUNCTION COLLAPSED.</span>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="mono">scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="section" id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ About</div>
+      <h2 id="about-heading">Ten years. One cloud.<br>Infinite possibilities.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body reveal">
+        <p>
+          In 2016, IBM made quantum computing accessible to anyone on the planet with an internet connection. That was the beginning of a decade-long experiment in democratizing one of the most profound technologies ever conceived.
+        </p>
+        <p>
+          Qiskit Fall Fest 2026 gathers students, researchers, engineers, and curious minds to reflect on that journey — and to explore what comes next. Through talks, workshops, panels, and hands-on sessions, we'll examine the ideas that have shaped quantum computing and the ones that will define its future.
+        </p>
+        <p>
+          No quantum physics degree required. Just curiosity.
+        </p>
+      </div>
+      <div class="track-cards">
+        <div class="track-card reveal" style="--delay:0.05s">
+          <div class="track-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3>Quantum Talks</h3>
+            <p>Expert presentations on the state of the art — hardware, algorithms, error correction, and more.</p>
+          </div>
+        </div>
+        <div class="track-card reveal" style="--delay:0.1s">
+          <div class="track-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3>Hands-On Workshops</h3>
+            <p>Code real quantum circuits on IBM Quantum hardware using Qiskit. Beginner-friendly with guided labs.</p>
+          </div>
+        </div>
+        <div class="track-card reveal" style="--delay:0.15s">
+          <div class="track-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3>Expert Panels</h3>
+            <p>Moderated conversations with leading researchers on the future of quantum technology and education.</p>
+          </div>
+        </div>
+        <div class="track-card reveal" style="--delay:0.2s">
+          <div class="track-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <div>
+            <h3>Networking Sessions</h3>
+            <p>Connect with students, researchers, and professionals in the quantum ecosystem across India and beyond.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUANTUM 101 — QUBIT EXPLAINER
+     ============================================================ -->
+<!-- ============================================================
+     HAQTHON
+     ============================================================ -->
+<section class="section" id="haqthon" aria-labelledby="haqthon-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ HaQthon</div>
+      <h2 id="haqthon-heading">A 24-hour sprint into quantum problem-solving.</h2>
+    </div>
+    <div class="section-note">
+      <p class="about-body">
+        HaQthon is our flagship hackathon track — teams build real Qiskit-based projects on IBM Quantum
+        hardware and simulators, guided by mentors from across the collaborating institutes.
+        Replace this paragraph with your actual HaQthon details (tracks, prizes, team size, timings).
+      </p>
+    </div>
+    <div class="hero-ctas" style="margin-top: 24px;">
+      <a href="#register" class="btn btn-primary">Register for haQthon</a>
+      <a href="#quantum-arena" class="btn btn-secondary">See Quantum Arena</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-raised" id="quantum" aria-labelledby="quantum-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ What is a Qubit?</div>
+      <h2 id="quantum-heading">Not just a faster bit.<br>A fundamentally different one.</h2>
+    </div>
+
+    <div class="bit-qubit-demo reveal">
+      <!-- Classical bit -->
+      <div class="bit-card" id="bit-card">
+        <div class="bit-label mono">BIT</div>
+        <div class="bit-display" id="bit-display">
+          <div class="bit-option" id="bit-0" data-val="0">0</div>
+          <div class="bit-option active" id="bit-1" data-val="1">1</div>
+        </div>
+        <p class="bit-desc">A classical bit is always either <strong>0</strong> or <strong>1</strong>. No ambiguity. No in-between.</p>
+        <button class="bit-flip-btn" id="bit-flip-btn" aria-label="Flip the classical bit">Flip bit</button>
+      </div>
+
+      <!-- Arrow -->
+      <div class="transition-arrow" aria-hidden="true">
+        <div class="arrow-line"></div>
+        <div class="arrow-label mono">quantum leap</div>
+      </div>
+
+      <!-- Qubit -->
+      <div class="bit-card qubit-card" id="qubit-card">
+        <div class="bit-label mono">QUBIT</div>
+        <div class="qubit-display" id="qubit-display">
+          <div class="qubit-state-eq" id="qubit-eq">
+            <span class="q-alpha">α</span><span class="q-ket">|0⟩</span>
+            <span class="q-plus"> + </span>
+            <span class="q-beta">β</span><span class="q-ket">|1⟩</span>
+          </div>
+          <div class="qubit-prob-bars">
+            <div class="prob-bar-wrap">
+              <div class="prob-label mono">|0⟩</div>
+              <div class="prob-track"><div class="prob-fill" id="prob-0" style="width:50%"></div></div>
+              <div class="prob-pct mono" id="prob-0-pct">50%</div>
+            </div>
+            <div class="prob-bar-wrap">
+              <div class="prob-label mono">|1⟩</div>
+              <div class="prob-track"><div class="prob-fill" id="prob-1" style="width:50%"></div></div>
+              <div class="prob-pct mono" id="prob-1-pct">50%</div>
+            </div>
+          </div>
+        </div>
+        <p class="bit-desc">A qubit can exist in a <strong>superposition</strong> of 0 and 1 simultaneously — until it's measured.</p>
+        <button class="bit-flip-btn qubit-measure-btn" id="qubit-measure-btn" aria-label="Measure the qubit — collapse its superposition">Measure it</button>
+      </div>
+    </div>
+
+    <!-- Measurement easter egg -->
+    <div class="measure-egg reveal" id="measure-egg">
+      <div class="measure-egg-inner">
+        <div class="measure-state" id="measure-state-display">
+          <span class="mono dont-measure-label">Don't measure me.</span>
+          <span class="mono measure-eq" id="measure-eq-text">|ψ⟩ = α|0⟩ + β|1⟩</span>
+        </div>
+        <div class="measure-hint mono">← click to observe</div>
+      </div>
+    </div>
+
+    <div class="qubit-insight-grid">
+      <div class="insight-card reveal" style="--delay:0s">
+        <div class="insight-icon mono">⊗</div>
+        <h3>Superposition</h3>
+        <p>While unobserved, a qubit holds both 0 and 1 simultaneously with quantum probabilities. Measurement forces it to choose.</p>
+      </div>
+      <div class="insight-card reveal" style="--delay:0.08s">
+        <div class="insight-icon mono">∿</div>
+        <h3>Entanglement</h3>
+        <p>Two qubits can be linked such that measuring one instantly determines the state of the other, regardless of distance.</p>
+      </div>
+      <div class="insight-card reveal" style="--delay:0.16s">
+        <div class="insight-icon mono">∫</div>
+        <h3>Interference</h3>
+        <p>Quantum algorithms use interference to amplify correct answers and cancel wrong ones — the engine of quantum speedup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CLOUD + QUANTUM VISUALIZATION
+     ============================================================ -->
+<section class="section" id="cloud-quantum" aria-labelledby="cloud-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Quantum on Cloud</div>
+      <h2 id="cloud-heading">Your circuit. IBM's quantum computer. The cloud in between.</h2>
+    </div>
+    <div class="cloud-flow-vis reveal" id="cloud-flow" aria-label="Visualization of a quantum circuit being executed in the cloud">
+      <div class="flow-node" id="flow-browser">
+        <div class="flow-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="2" y="5" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="2" y1="25" x2="30" y2="25" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="13" y1="28" x2="19" y2="28" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="flow-label mono">Your Browser</div>
+        <div class="flow-sub">Write Qiskit code</div>
+      </div>
+      <div class="flow-connector" id="flow-c1">
+        <div class="flow-packet" id="flow-packet-1"></div>
+        <svg width="60" height="2" viewBox="0 0 60 2" aria-hidden="true"><line x1="0" y1="1" x2="60" y2="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+      </div>
+      <div class="flow-node" id="flow-cloud">
+        <div class="flow-icon">
+          <svg width="32" height="28" viewBox="0 0 32 28" fill="none" aria-hidden="true">
+            <path d="M8 22a6 6 0 010-12 8 8 0 0116 2 5 5 0 010 10H8Z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="flow-label mono">IBM Cloud</div>
+        <div class="flow-sub">Queue & execute</div>
+      </div>
+      <div class="flow-connector" id="flow-c2">
+        <div class="flow-packet" id="flow-packet-2"></div>
+        <svg width="60" height="2" viewBox="0 0 60 2" aria-hidden="true"><line x1="0" y1="1" x2="60" y2="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+      </div>
+      <div class="flow-node" id="flow-qpu">
+        <div class="flow-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="11" cy="11" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="16" cy="11" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="21" cy="11" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="11" cy="16" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="16" cy="16" r="2" fill="currentColor" opacity="0.5"/>
+            <circle cx="21" cy="16" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="11" cy="21" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="16" cy="21" r="2" stroke="currentColor" stroke-width="1"/>
+            <circle cx="21" cy="21" r="2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="flow-label mono">Quantum Processor</div>
+        <div class="flow-sub">127+ qubits</div>
+      </div>
+      <div class="flow-connector flow-return" id="flow-c3">
+        <div class="flow-packet flow-packet-return" id="flow-packet-3"></div>
+        <svg width="60" height="2" viewBox="0 0 60 2" aria-hidden="true"><line x1="0" y1="1" x2="60" y2="1" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+      </div>
+      <div class="flow-node" id="flow-result">
+        <div class="flow-icon flow-result-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="4" y="4" width="24" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 20 L12 10 L16 18 L20 12 L24 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="flow-label mono">Results</div>
+        <div class="flow-sub">Measurement outcomes</div>
+      </div>
+    </div>
+    <div class="cloud-flow-caption reveal">
+      <button class="btn btn-secondary" id="flow-play-btn" aria-label="Animate the quantum circuit flow">Run Circuit ▶</button>
+      <span class="mono cloud-caption-text">Click to simulate sending a quantum circuit to the cloud</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUANTUM CIRCUIT INTERACTION
+     ============================================================ -->
+<section class="section section-raised" id="circuit" aria-labelledby="circuit-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Interactive Circuit</div>
+      <h2 id="circuit-heading">Build a quantum circuit.<br>Right here.</h2>
+    </div>
+    <p class="section-intro reveal">Click gates to add them. See the quantum state evolve. Click Measure to get a result.</p>
+    <div class="circuit-playground reveal" id="circuit-playground" aria-label="Interactive quantum circuit builder">
+      <div class="circuit-header">
+        <div class="gate-palette" role="toolbar" aria-label="Available quantum gates">
+          <button class="gate-btn" data-gate="H" aria-label="Hadamard gate — creates superposition">H</button>
+          <button class="gate-btn" data-gate="X" aria-label="Pauli-X gate — quantum NOT">X</button>
+          <button class="gate-btn" data-gate="Z" aria-label="Pauli-Z gate — phase flip">Z</button>
+          <button class="gate-btn" data-gate="CNOT" aria-label="CNOT gate — controlled NOT, creates entanglement">CNOT</button>
+          <button class="gate-btn gate-measure" data-gate="M" aria-label="Measure — collapse quantum state">M</button>
+          <button class="circuit-reset-btn" id="circuit-reset" aria-label="Reset circuit">Reset</button>
+        </div>
+      </div>
+      <div class="circuit-diagram" id="circuit-diagram">
+        <div class="circuit-wire" data-qubit="0">
+          <div class="wire-label mono">q₀ |0⟩</div>
+          <div class="wire-line"></div>
+          <div class="wire-gates" id="wire-gates-0"></div>
+        </div>
+        <div class="circuit-wire" data-qubit="1">
+          <div class="wire-label mono">q₁ |0⟩</div>
+          <div class="wire-line"></div>
+          <div class="wire-gates" id="wire-gates-1"></div>
+        </div>
+      </div>
+      <div class="circuit-result" id="circuit-result" aria-live="polite">
+        <div class="mono circuit-result-label">State:</div>
+        <div class="circuit-state-display" id="circuit-state-display">|00⟩</div>
+      </div>
+    </div>
+
+    <!-- Heisenberg Uncertainty easter egg -->
+    <div class="heisenberg-egg reveal" id="heisenberg-egg">
+      <div class="heisenberg-values">
+        <span class="heisenberg-item mono" id="heis-pos">Position: <strong id="heis-pos-val">CERTAIN</strong></span>
+        <span class="heisenberg-sep">·</span>
+        <span class="heisenberg-item mono" id="heis-mom">Momentum: <strong id="heis-mom-val">???</strong></span>
+      </div>
+      <div class="heisenberg-hint mono">← hover to invoke ΔxΔp ≥ ℏ/2</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DECADE TIMELINE
+     ============================================================ -->
+<section class="section" id="timeline" aria-labelledby="timeline-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ A Decade of Quantum</div>
+      <h2 id="timeline-heading">2016 → 2026.<br>Ten years that changed computing.</h2>
+    </div>
+  </div>
+  <!-- Full-width timeline -->
+  <div class="timeline-scroll-container" role="region" aria-label="Quantum computing decade timeline — scroll horizontally">
+    <div class="timeline-track" id="timeline-track">
+      <!-- Populated by JS from data/timeline.js -->
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="timeline-nav reveal" aria-label="Timeline navigation">
+      <button class="timeline-nav-btn" id="tl-prev" aria-label="Previous milestone">←</button>
+      <div class="timeline-progress" id="tl-progress" aria-hidden="true"></div>
+      <button class="timeline-nav-btn" id="tl-next" aria-label="Next milestone">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SCHEDULE
+     ============================================================ -->
+<section class="section section-raised" id="schedule" aria-labelledby="schedule-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Schedule</div>
+      <h2 id="schedule-heading">Two days of quantum exploration.</h2>
+    </div>
+
+    <!-- Day tabs -->
+    <div class="day-tabs reveal" role="tablist" aria-label="Event days">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="filter-tabs reveal" role="group" aria-label="Filter sessions by type">
+      <span class="mono filter-label">Filter:</span>
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="talk" aria-pressed="false">Talks</button>
+      <button class="filter-btn" data-filter="workshop" aria-pressed="false">Workshops</button>
+      <button class="filter-btn" data-filter="panel" aria-pressed="false">Panels</button>
+      <button class="filter-btn" data-filter="hands-on" aria-pressed="false">Hands-On</button>
+    </div>
+
+    <!-- Schedule panels — populated by JS -->
+    <div class="schedule-panels" id="schedule-panels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SPEAKERS
+     ============================================================ -->
+<section class="section" id="speakers" aria-labelledby="speakers-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Speakers</div>
+      <h2 id="speakers-heading">Minds shaping quantum's next decade.</h2>
+    </div>
+    <!-- Speaker grid — populated by JS -->
+    <div class="speaker-grid" id="speaker-grid"></div>
+  </div>
+
+  <!-- Entangled qubit B — far from qubit A -->
+  <div class="qubit-particle qubit-b" id="qubit-b" aria-label="Entangled qubit B — entangled with qubit A near the top" tabindex="0" role="button">
+    <div class="qubit-inner"></div>
+    <div class="qubit-label">q₁</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUANTUM ARENA
+     ============================================================ -->
+<section class="section section-raised" id="quantum-arena" aria-labelledby="quantum-arena-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Quantum Arena</div>
+      <h2 id="quantum-arena-heading">Compete. Compute. Collapse the leaderboard.</h2>
+    </div>
+    <div class="section-note">
+      <p class="about-body">
+        Quantum Arena is our competitive challenge track — solve short Qiskit puzzles and circuit-design
+        problems for a spot on the leaderboard. Replace this paragraph with your actual Quantum Arena
+        rules, challenge format, and prizes.
+      </p>
+    </div>
+    <div class="hero-ctas" style="margin-top: 24px;">
+      <a href="#register" class="btn btn-primary">Enter the Arena</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOCIAL MEDIA
+     ============================================================ -->
+<section class="section" id="social" aria-labelledby="social-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Social Media</div>
+      <h2 id="social-heading">Follow along.</h2>
+    </div>
+    <div class="partners-strip reveal">
+      <a href="#" class="partner-slot" rel="noopener" aria-label="Instagram">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2" y="2" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="11" r="4.5" stroke="currentColor" stroke-width="1.2"/><circle cx="16.2" cy="5.8" r="1" fill="currentColor"/></svg>
+        Instagram
+      </a>
+      <a href="#" class="partner-slot" rel="noopener" aria-label="LinkedIn">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2" y="2" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="7.5" r="1.1" fill="currentColor"/><path d="M7 10.5v6M11 10.5v6M11 13c0-1.7 1.2-2.5 2.5-2.5S16 11.3 16 13v3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:quantum@yourinstitution.edu" class="partner-slot" aria-label="Email">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><rect x="2" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3 6l8 6 8-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Email Us
+      </a>
+    </div>
+    <p class="section-note" style="margin-top:16px; font-size:0.85rem; color: var(--ink-faint);">
+      Replace the "#" hrefs above with your real Instagram / LinkedIn profile links.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     VENUE
+     ============================================================ -->
+<section class="section section-raised" id="venue" aria-labelledby="venue-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Venue</div>
+      <h2 id="venue-heading">Where it happens.</h2>
+    </div>
+    <div class="venue-grid">
+      <div class="venue-info reveal">
+        <div class="venue-detail">
+          <div class="venue-detail-label mono">Institution</div>
+          <div class="venue-detail-value">Your Institution Name</div>
+        </div>
+        <div class="venue-detail">
+          <div class="venue-detail-label mono">Address</div>
+          <div class="venue-detail-value">Institution Address, Pune, Maharashtra 411000</div>
+        </div>
+        <div class="venue-detail">
+          <div class="venue-detail-label mono">Dates</div>
+          <div class="venue-detail-value">October 10–11, 2026</div>
+        </div>
+        <div class="venue-detail">
+          <div class="venue-detail-label mono">Format</div>
+          <div class="venue-detail-value">Hybrid — In-person + Virtual attendance</div>
+        </div>
+        <div class="venue-detail">
+          <div class="venue-detail-label mono">Online Platform</div>
+          <div class="venue-detail-value">Zoom / YouTube Live (link shared on registration)</div>
+        </div>
+      </div>
+      <div class="venue-map-placeholder reveal">
+        <div class="map-inner">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M24 4C16.27 4 10 10.27 10 18c0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14Z" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="18" r="5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <p class="mono">Pune, Maharashtra</p>
+          <p>Replace this block with an embedded map or directions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLABORATION
+     ============================================================ -->
+<section class="section" id="collaboration" aria-labelledby="collaboration-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ Collaboration</div>
+      <h2 id="collaboration-heading">Built by the quantum community.</h2>
+    </div>
+    <div class="partners-strip reveal">
+      <!-- LOGO SLOT: assets/logos/mit-wpu.png -->
+      <a href="https://mitwpu.edu.in" class="partner-slot" target="_blank" rel="noopener">
+        <img src="assets/logos/mit-wpu.png" alt="" class="partner-logo" onerror="this.style.display='none'">
+        MIT-WPU
+      </a>
+      <!-- LOGO SLOT: assets/logos/iiser-pune.png -->
+      <a href="https://www.iiserpune.ac.in" class="partner-slot" target="_blank" rel="noopener">
+        <img src="assets/logos/iiser-pune.png" alt="" class="partner-logo" onerror="this.style.display='none'">
+        IISER Pune
+      </a>
+      <!-- LOGO SLOT: assets/logos/mmcoe.png -->
+      <a href="https://mmcoe.edu.in" class="partner-slot" target="_blank" rel="noopener">
+        <img src="assets/logos/mmcoe.png" alt="" class="partner-logo" onerror="this.style.display='none'">
+        MMCOE
+      </a>
+      <!-- LOGO SLOT: assets/logos/ihub.png — replace "#" with I-HUB's real URL -->
+      <a href="#" class="partner-slot" target="_blank" rel="noopener">
+        <img src="assets/logos/ihub.png" alt="" class="partner-logo" onerror="this.style.display='none'">
+        I-HUB
+      </a>
+      <!-- LOGO SLOT: assets/logos/ibm-quantum.png -->
+      <a href="https://www.ibm.com/quantum" class="partner-slot" target="_blank" rel="noopener">
+        <img src="assets/logos/ibm-quantum.png" alt="" class="partner-logo" onerror="this.style.display='none'">
+        IBM Quantum
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REGISTER CTA
+     ============================================================ -->
+<section class="register-cta" id="register" aria-labelledby="register-heading">
+  <canvas id="register-wave-canvas" aria-hidden="true"></canvas>
+  <div class="wrap register-wrap">
+    <div class="register-copy reveal">
+      <div class="section-kicker mono" style="color: rgba(255,255,255,0.6)">/ Register</div>
+      <h2 id="register-heading">The future isn't waiting.</h2>
+      <p>Come explore it.</p>
+      <a href="#" class="btn btn-register" id="register-btn" aria-label="Register for Qiskit Fall Fest 2026">
+        <span>Register for Fall Fest</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="register-meta mono">
+        October 10–11, 2026 · Pune · Hybrid · Free to attend
+      </div>
+    </div>
+    <!-- Quantum particles decoration -->
+    <div class="register-particles" aria-hidden="true">
+      <div class="reg-particle" style="--x:20%;--y:30%;--size:4px;--delay:0s"></div>
+      <div class="reg-particle" style="--x:75%;--y:20%;--size:6px;--delay:0.5s"></div>
+      <div class="reg-particle" style="--x:55%;--y:70%;--size:3px;--delay:1s"></div>
+      <div class="reg-particle" style="--x:85%;--y:55%;--size:5px;--delay:0.3s"></div>
+      <div class="reg-particle" style="--x:10%;--y:65%;--size:4px;--delay:0.8s"></div>
+      <div class="reg-particle" style="--x:45%;--y:15%;--size:3px;--delay:1.2s"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="section" id="faq" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-kicker mono">/ FAQ</div>
+      <h2 id="faq-heading">Questions? We have answers.<br><em>Probably.</em></h2>
+    </div>
+    <div class="faq-list reveal" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+          Do I need to know quantum physics to attend?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-1">
+          <p>Absolutely not. Qiskit Fall Fest is designed for everyone — from complete beginners to experienced researchers. Our introductory sessions will bring you up to speed, and our advanced workshops will challenge experts. Curiosity is the only prerequisite.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+          Is the event free?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-2">
+          <p>Yes! Qiskit Fall Fest is free to attend for all registered participants, both in-person and virtually. We believe quantum education should be accessible to everyone.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+          What should I bring to the workshops?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-3">
+          <p>Bring a laptop with Python installed. We recommend setting up a Qiskit environment beforehand — instructions will be sent to all registered participants a week before the event. We'll also have pre-configured cloud environments available.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+          Can I attend virtually?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-4">
+          <p>Yes! The event is hybrid. All talks and panels will be live-streamed. Virtual participants can access workshop materials and join live Q&A sessions. Details will be shared closer to the event.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+          Will there be certificates?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-5">
+          <p>Yes! All registered participants who attend will receive a certificate of participation. Workshop completers will receive specific workshop completion certificates. Certificates will be issued digitally within two weeks of the event.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+          How do I contact the organizers?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer" id="faq-6">
+          <p>Reach us at <a href="mailto:quantum@yourinstitution.edu">quantum@yourinstitution.edu</a> or find us on <a href="#">Instagram</a> and <a href="#">LinkedIn</a>. We typically respond within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden DO NOT CLICK button easter egg -->
+    <div class="do-not-click-wrap">
+      <button class="do-not-click-btn" id="do-not-click-btn" aria-label="A mysterious button you probably should not click">DO NOT CLICK</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" id="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="brand footer-brand-link" aria-label="Qiskit Fall Fest — Back to top">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="16" cy="16" r="13" stroke="#7C4DBF" stroke-width="1.4" opacity="0.6"/>
+            <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="#9B6FD4" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <ellipse cx="16" cy="16" rx="13" ry="4.5" stroke="#9B6FD4" stroke-width="1" transform="rotate(60 16 16)" stroke-dasharray="2 2" opacity="0.5"/>
+            <circle cx="16" cy="16" r="2.2" fill="#7C4DBF" opacity="0.7"/>
+          </svg>
+          Qiskit Fall Fest
+        </a>
+        <p class="footer-tagline">
+          A Decade of Quantum on Cloud.<br>
+          Pune · October 2026 · Hybrid
+        </p>
+        <!-- Feynman trigger (very subtle atom icon) -->
+        <div class="footer-feynman-trigger" id="footer-feynman" title="Hover for 2 seconds..." aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="0.8" opacity="0.2"/>
+            <ellipse cx="7" cy="7" rx="6" ry="2" stroke="currentColor" stroke-width="0.7" opacity="0.2" transform="rotate(45 7 7)"/>
+            <circle cx="7" cy="7" r="1.2" fill="currentColor" opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="mono">Navigate</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#haqthon">HaQthon</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#collaboration">Collaboration</a></li>
+          <li><a href="#social">Social Media</a></li>
+          <li><a href="#quantum-arena">Quantum Arena</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="mono">Connect</h4>
+        <ul>
+          <li><a href="mailto:quantum@yourinstitution.edu">Email Us</a></li>
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" rel="noopener">Qiskit.org</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Qiskit Fall Fest — A Decade of Quantum on Cloud</span>
+      <span class="mono footer-state">|ψ_site⟩ = superposition of design + code</span>
+    </div>
+  </div>
+
+  <!-- Feynman quote popup -->
+  <div class="feynman-popup" id="feynman-popup" role="dialog" aria-label="A Feynman quote" aria-hidden="true">
+    <div class="feynman-quote">
+      <div class="feynman-mark mono">R.P. Feynman</div>
+      <blockquote id="feynman-quote-text">"What I cannot create, I do not understand."</blockquote>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     OVERLAY ELEMENTS
+     ============================================================ -->
+
+<!-- Konami code message -->
+<div class="konami-overlay" id="konami-overlay" role="dialog" aria-hidden="true" aria-label="Secret quantum message">
+  <div class="konami-inner">
+    <div class="konami-badge mono">// QUANTUM STATE ACCESSED //</div>
+    <h2>You found the hidden state.</h2>
+    <p>In quantum mechanics, simply looking changes everything. You looked — and now you know: the universe at its smallest scale is stranger and more beautiful than anyone imagined.</p>
+    <div class="konami-eq mono">|explorer⟩ = |curious⟩ ⊗ |determined⟩</div>
+    <button class="btn btn-primary" id="konami-close">Collapse this state</button>
+  </div>
+</div>
+
+<!-- SVG entanglement connection line -->
+<svg class="entanglement-svg" id="entanglement-svg" aria-hidden="true" style="pointer-events:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:9998;display:none;">
+  <line id="entanglement-line" x1="0" y1="0" x2="0" y2="0" stroke="#9B6FD4" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+</svg>
+
+<!-- DO NOT CLICK outcome -->
+<div class="dnc-message" id="dnc-message" aria-live="assertive" aria-atomic="true"></div>
+
+<!-- Scripts (deferred so DOM is fully parsed) -->
+<script src="js/main.js" defer></script>
+<script src="js/schrodinger.js" defer></script>
+<script src="js/quantum-circuit.js" defer></script>
+<script src="js/entanglement.js" defer></script>
+<script src="js/quantum-easter-eggs.js" defer></script>
+
+<!-- Developer Easter Egg Comments -->
+<!-- 
+  // If you're reading this, you found another quantum state.
+  // Observation changes everything.
+  // 
+  // This site was built with love, quantum curiosity, and too much coffee.
+  // 
+  // |developer⟩ = α|sleeping⟩ + β|coding⟩
+  // 
+  // "What I cannot create, I do not understand." — R.P. Feynman
+  //
+  // Try the Konami code: ↑↑↓↓←→←→BA
+-->
+</body>
+</html>
